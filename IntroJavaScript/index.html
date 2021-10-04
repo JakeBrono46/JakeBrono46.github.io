@@ -12,7 +12,7 @@
     function search(){
 
         //Replace sample domain name below with own domain name
-        var site = "jakebrono46.github.io/AgostiCreations";
+        var site = "wikipedia.org";
 
         //Get text user typed in textbox
         var lookfor = document.getElementById("txtlookfor").value;
@@ -20,8 +20,19 @@
         //If-else statement
         if(lookfor.length > 0){
 
+            //Look at drop-down value and make search URL accordingly
+            var ddchoice = document.getElementById("dropdown");
+
             //Build URL for search
-            var query = "http://www.google.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
+
+            if(ddchoice == 2){
+
+                var query = "http://www.google.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
+            }else{
+
+                var query = "http://www.bing.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
+            }
+            
 
             //Set address bar equal to query. site = query
             location.href = query;
@@ -38,6 +49,17 @@
     
     <p>Search this site:
         <input type="text" id="txtlookfor" autofocus>
+
+        <!-- Show drop-down list -->
+        &nbsp;Choose engine:
+        <select id="dropdown">
+
+            <option value="1">Selected</option>
+            <option value="2">Bing</option>
+            <option value="3">Google</option>
+
+        </select>
+
         <input type="button" onclick="search()" value="Go">
     </p>
 
