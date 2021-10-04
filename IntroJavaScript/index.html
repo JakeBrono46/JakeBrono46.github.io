@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intro to JavaScript Webpage</title>
-    
+    <title>Intro JavaScript</title>
+
+    <script>
+    //Search a specific site rather than the entire site
+
+    function search(){
+
+        //Replace sample domain name below with own domain name
+        var site = "wikipedia.org";
+
+        //Get text user typed in textbox
+        var lookfor = document.getElementById("txtlookfor").value;
+
+        //If-else statement
+        if(lookfor.length > 0){
+
+            //Build URL for search
+            var query = "http://www.google.com/search?q=" + encodeURIComponent(lookfor) + " site:" + site;
+
+            //Set address bar equal to query. site = query
+            location.href = query;
+        }else{
+
+            //If textbox is empty, show alert
+            alert("Please type the word or phrase you would like to search for");
+        }
+    }
+
+    </script>
 </head>
 <body>
-    <!-- HTML Comment -->
+    
+    <p>Search this site:
+        <input type="text" id="txtlookfor" autofocus>
+        <input type="button" onclick="search()" value="Go">
+    </p>
 
-    <script>
-        //Sample Numbers
-        var quanity = 5, price = 4.99;
-        var subtotal = quanity * price;
-
-        document.write(subtotal)
-        document.write("<br>")
-        document.write(subtotal.toFixed(2))
-    </script>
-
-    <script>
-        //Sample Dates
-        var today = new Date()
-
-        var bday = new Date(1995, 2, 6)
-        var halloween = new Date("Oct 31 2021")
-        var valentines = new Date("Feb 14 2021 19:00:01")
-
-        document.write(today)
-        document.write("<br>")
-        document.write(bday)
-        document.write("<br>")
-        document.write(halloween)
-        document.write("<br")
-        document.write(valentines)
-    </script>
 </body>
 </html>
