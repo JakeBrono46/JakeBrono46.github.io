@@ -92,11 +92,6 @@
             background-color: #ddd;
         }
 
-        .button.active{
-            background-color: #666;
-            color: white;
-        }
-
     </style>
 </head>
 
@@ -112,12 +107,9 @@
     <h2 style="text-align:center; font-family: Copperplate;">GRAPHICS</h2>
 
     <!--Buttons to choose List or Grid View-->
+    <button class="button" onclick="list()">List</div>
+    <button class="button" onclick="grid()">Grid</button>
     
-    <div id="container">
-        <button class="button" onclick="list()">List</div>
-        <button class="button active" onclick="grid()">Grid</button>
-    </div>
-
     <div class="row">
         <div class="column">
             <img src="Graphics\TrishStratus.jpg" alt="Trish Stratus" class="center" style="width: 300px; height: 400px;">
@@ -162,18 +154,6 @@
                 
             }
         }
-
-        var container = document.getElementById("container");
-        var buttons = container.getElementsByClassName("button");
-
-        for (var i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener("click", function(){
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            }); 
-            
-        } 
    </script>
 </body>
 </html>
