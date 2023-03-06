@@ -5,6 +5,12 @@ h1 {
     font-size: 30px;
 }
 
+h2 {
+    font: bold 1em/1em Copperplate, sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
 /* Style Tabs */
 .tabs{
     overflow: hidden;
