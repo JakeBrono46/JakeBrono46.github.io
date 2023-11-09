@@ -3,6 +3,7 @@ h1 {
     text-align: center;
     padding-top: 5px;
     font-size: 30px;
+    color: gold;
 }
 
 h2 {
@@ -14,8 +15,8 @@ h2 {
 /* Style Tabs */
 .tabs{
     overflow: hidden;
-    border: 5px ridge black;
-    background-color: #f1f1f1;
+    border: 5px ridge darkblue;
+    background-color: silver;
 }
 
 /* Style Buttons */
