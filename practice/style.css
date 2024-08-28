@@ -1,4 +1,13 @@
-body {background-color: lightgrey;}
+body {
+    background-color: lightgrey;
+}
                 
-h1 {color: deepskyblue; font-size: 60px; background-color: slateblue; font-family: Verdana; 
-                    font-size: 300%; text-align: center; border: 5px solid black;}
+h1 {
+    color: deepskyblue;
+    font-size: 60px; 
+    background-color: slateblue; 
+    font-family: Verdana; 
+    font-size: 300%; 
+    text-align: center; 
+    border: 5px solid black;
+}
