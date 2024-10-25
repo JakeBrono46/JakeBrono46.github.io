@@ -1,4 +1,4 @@
-h1{
+h1, h2{
 
     text-align: center;
 }
@@ -6,4 +6,26 @@ h1{
 body{
 
     background-color: rgb(220, 219, 219);
+}
+
+.tabs{
+
+    overflow: hidden;
+    border: 5px inset black;
+    background-color: #f1f1f1;
+
+}
+
+.tabs a{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: 0.3s;
+    font-size: 15px;
+    font: bold 1em/1em Arial, sans-serif;
+    text-decoration: none;
+    color: black;
 }
